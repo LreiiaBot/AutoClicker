@@ -12,6 +12,8 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -28,6 +30,26 @@
             </Grid.RowDefinitions>
             <TextBox x:Name="tbWrite" Grid.Row="0"/>
             <Button Click="BtnWrite" Content="Write" Grid.Row="1"/>
+        </Grid>
+        <Grid Grid.Column="4">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tbDelay" Grid.Row="0"/>
+            <Button Click="BtnDelay" Content="Delay" Grid.Row="1"/>
+        </Grid>
+        <Grid Grid.Column="5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Content="Move up" Grid.Row="0"/>
+            <ListBox Grid.Row="1" ItemsSource="{Binding LActions}" SelectedItem="{Binding Selected}">
+
+            </ListBox>
+            <Button Content="Move down" Grid.Row="2"/>
         </Grid>
     </Grid>
 </Window>
