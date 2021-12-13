@@ -78,7 +78,7 @@ namespace MouseMovement
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Remember = Csv.Read();
+            //Remember = Csv.Read();
         }
 
         private void BtnSelect(object sender, RoutedEventArgs e)
