@@ -94,10 +94,21 @@ namespace MouseMovement
         {
             LRemember.Clear();
         }
-
+        private void BtnWrite(object sender, RoutedEventArgs e)
+        {
+            Write();
+        }
         private void Window_Closed(object sender, EventArgs e)
         {
             Csv.Save(LRemember);
+        }
+
+        private async void Write()
+        {
+
+            await Task.Run(() => Thread.Sleep(800));
+            string s = tbWrite.Text;
+            System.Windows.Forms.SendKeys.SendWait(s);
         }
     }
 }

@@ -6,15 +6,28 @@
         xmlns:local="clr-namespace:MouseMovement"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Closed="Window_Closed" Loaded="Window_Loaded">
-    <Grid>
+    <Grid Margin="30">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
             <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
 
         <Button Click="BtnSelect" Content="Select" Grid.Column="0"/>
         <Button Click="BtnClick" Content="Click" Grid.Column="1"/>
         <Button Click="BtnDelete" Content="Delete" Grid.Column="2"/>
+
+        <Grid Grid.Column="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="tbWrite" Grid.Row="0"/>
+            <Button Click="BtnWrite" Content="Write" Grid.Row="1"/>
+        </Grid>
     </Grid>
 </Window>
